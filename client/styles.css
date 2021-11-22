@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+   
+}
+
+body {
+    background-color: hsl(235, 21%, 11%);
+   
+}
+
+h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    
+    
+}
+
+#app-banner {
+    background-image: url('/design/bg-desktop-dark.jpg');
+    width: 100%;
+    height: 40vh;
+    display: inline-block;
+    margin-top: 10%;
+}
+
+
+
+#form {
+    margin-top: 0;
+    margin-left: 325px;
+    
+    
+}
+ #input {
+    width: 25rem;
+    height: 2rem; 
+    margin-bottom: 15px;
+    border-radius: 5px;
+
+}
+
+.todos {
+    list-style-type: none;
+    background-color: whitesmoke;
+    width: 25rem;
+    border-radius: 5px;
+}
+
+#todo-item {
+    font-size: 1.5rem;
+    padding: .5rem;
+}
