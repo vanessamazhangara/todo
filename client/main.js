@@ -12,16 +12,22 @@ form.addEventListener('submit', (e) => {
          todo: todo,
      };
 
-    if (todo) {
-        const newTodo = document.createElement('li');
-        newTodo.innerText = todo;
-        todos.appendChild(todo);
-    };
-
     axios.post('http://localhost:6575/todo', todoObj )
     .then(res => {
-        console.log(res.data)
-        display(res.data)
+        //  console.log(res.data)
+       let newTodoArray = res.data;
+       todos.innerHTML = '';
+       newTodoArray.forEach((todoItem) => {
+            const newTodo = document.createElement('li');
+            newTodo.innerText = todoItem.todo;
+            todos.appendChild(newTodo);
+       })
+       input.value = '';
+    //    console.log(todos.innerHTML)
     })
     .catch(err => console.log(err))
 });
+
+
+// newTodo.innerText = '<h1>Hello</h1>'
+// newTodo.innerHTML = '<h1>Hello</h1>'
