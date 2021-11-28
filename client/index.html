@@ -9,25 +9,28 @@
 </head>
 <body>
     <section id='app-banner'>
-        <h1>Todo</h1>
-         <form id='form'>
-            <input id='input' type="text" placeholder="create todo"/>
-            <ul class="todos">
-                <li id='todo-item'></li>
-            </ul>
-        </form>
+        <div id='todo-container'>
+            <h1>Todo</h1>
+            <form id='form'>
+               <input id='input' type="text" placeholder="create todo"/>
+            </form>
+            <div id='list-buttons'>
+                <ul class="todos"></ul>
+                <div id='button-labels'>
+                    <button id="All-Button">All</button><button id="active-btn">Active</button><button>Completed</button>
+                </div> 
+            </div>
+          
+        </div>
+       
         
     </section>
+
+
+
+
+
     
-  
-
-
-
-
-
-
-
-
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src='main.js'></script>  
 </body>

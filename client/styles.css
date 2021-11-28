@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
-   
+   margin: 0;
+   padding: 0;
 }
 
 body {
@@ -28,27 +29,75 @@ h1 {
 
 #form {
     margin-top: 0;
-    margin-left: 325px;
-    
+   
+    display: flex;
+    flex-direction: column;
     
 }
  #input {
     width: 25rem;
     height: 2rem; 
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     border-radius: 5px;
 
 }
 
 .todos {
     list-style-type: none;
-    
     width: 25rem;
     border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 0;
+    
 }
 
-#todo-item {
-    font-size: 1.5rem;
-    padding: .5rem;
+ul li:before {
+    content: '✓ ';
+    color: purple;
+}
+
+li {
+    border-bottom: 1px solid grey;
+    padding: 10px;
+    cursor: pointer;
     
+}
+
+#dem-buttons {
+    width: 25rem;
+    height: 2rem; 
+    margin: 0 auto;
+}
+
+
+button {
+    background: transparent;
+    border: none;
+    padding: 5px 20px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+button:hover {
+    color: red;
+}
+
+#button-labels {
+    display: flex;
+    justify-content: space-evenly;
+    width: 25rem; 
+    border-radius: 5%;
+    margin-top: 0;
+    margin: 0 auto;
+}
+
+#todo-container {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#list-buttons {
+    background-color: white;
 }
