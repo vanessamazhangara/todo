@@ -1,9 +1,12 @@
 const form = document.getElementById('form');
 const input = document.getElementById('input');
 const todos = document.querySelector('.todos');
-const allBtn = document.getElementById('All-Button')
-const activeBtn = document.getElementById('active-btn')
+const allBtn = document.getElementById('All-Button');
+const activeBtn = document.getElementById('active-btn');
+const completedBtn = document.getElementById('completed');
+const deleteAll = document.getElementById('delete-all');
 
+// const Ctrl = require("./controller");
 
 const addEventListeners = () => {
     const allTodoElements = document.querySelectorAll('li');
@@ -97,29 +100,6 @@ function completedTodo (id)  {
 }
 
 
-
-// document.getElementById('All-Button').onclick = function allButton() {
-    
-//     axios.get('http://localhost:6575/all') 
-//     .then(res => {   
-//         todoList = res.data
-//         console.log('todolist', todoList)
-//         todos.innerHTML = '';
-//         todoList.forEach((todoItem) => {
-//            const todoElement = document.createElement('li');
-//            if (todoItem.completed) {
-//             todoElement.style.textDecoration = 'line-through'
-//             }
-//            todoElement.setAttribute('data-id', todoItem.id)
-//         //    console.log('inside loop', todoItem)
-//            todoElement.innerText = todoItem.todo
-//             todos.appendChild(todoElement)
-//         })
-//         addEventListeners();
-//     })
-//     .catch(err => console.log(err))
-// }
-
 allBtn.addEventListener('click', () => {
     axios.get('http://localhost:6575/all') 
     .then(res => {   
@@ -157,10 +137,54 @@ activeBtn.addEventListener('click', () => {
         addEventListeners();
     })
     .catch(err => console.log(err))
-})
+});
+
+completedBtn.addEventListener('click', () => {
+    axios.get('http://localhost:6575/completed') 
+    .then(res => {   
+        todoList = res.data
+        console.log('todolist', todoList)
+        todos.innerHTML = '';
+        todoList.forEach((todoItem) => {
+           const todoElement = document.createElement('li');
+           if (todoItem.completed) {
+            todoElement.style.textDecoration = 'line-through'
+            }
+           todoElement.setAttribute('data-id', todoItem.id)
+        //    console.log('inside loop', todoItem)
+           todoElement.innerText = todoItem.todo
+            todos.appendChild(todoElement)
+        })
+        addEventListeners()
+    })
+    .catch(err => console.log(err))
+});
+
+
+
+
+deleteAll.addEventListener('click', () => { 
+    let todoArray = [];
+    return todoArray
+});
+
+
+
+
+    
+//     axios.delete('http://localhost:6575/todo')
+//     .then(res => {
+//         todoList = res.data   
+//         console.log('todolist', todoList)
+        
+//         todoList.forEach((todoItem) => {
+//             const todoElement = document.createElement('li')
+//             todoItem.innerHTML =
+//         })
+    
+//     })
+//     .catch(err => console.log(err))
+// // });
+
 
 getTodoList();
-
-
-
-

@@ -44,7 +44,19 @@ module.exports = {
 
         // console.log('this is the active', activeArray)
         res.status(200).send(activeArray);
-    }
+    },
+
+    completedTodo: (req, res) => {
+        let completedArray = todoArray.filter(todoItem => {
+            return todoItem.completed === true
+        })
+        res.status(200).send(completedArray);
+    },
+
+    // deleteAll: (req,res) => {
+    //     let todoArray = [];
+    //     res.status(200).send(todoArray);
+    // },
 
    
 }

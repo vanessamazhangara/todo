@@ -14,7 +14,9 @@ app.post('/todo', authCtrl.createTodo);
 app.get('/todo', authCtrl.getTodo);
 app.get('/all',authCtrl.allTodo);
 app.get('/active', authCtrl.activeTodo);
+app.get('/completed', authCtrl.completedTodo);
 app.put('/todo/:id', authCtrl.updateTodo);
+app.delete('/todo'), authCtrl.deleteAll;
 
 
 app.listen(SERVER_PORT, () => console.log(`server is running on ${SERVER_PORT}`))
