@@ -19,6 +19,16 @@ const addEventListeners = () => {
      }
 }
 
+// const deleteTodo = () => {
+//     // const allTodoElements = document.querySelectorAll('li');
+//     // for (let i = 0; i < allTodoElements.length; i++) {
+//     //    const li = allTodoElements[i];
+//     //    li.appendChild(deleteBtn);
+//     //    deleteBtn.setAttribute('id', 'delete-todo')
+       
+    
+// }
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -49,6 +59,7 @@ form.addEventListener('submit', (e) => {
     })
     .catch(err => console.log(err))
 });
+
 
 
 // newTodo.innerText = '<h1>Hello</h1>'
@@ -116,6 +127,7 @@ allBtn.addEventListener('click', () => {
             todos.appendChild(todoElement)
         })
         addEventListeners();
+
     })
     .catch(err => console.log(err))
 })
