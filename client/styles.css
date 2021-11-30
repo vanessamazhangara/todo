@@ -16,12 +16,14 @@ h1 {
     font-size: 3rem;
     text-align: center;
     font-weight: Bold 700;
-    
+    margin-top: 25px;
+    margin-bottom: 25px;
     
 }
 
 #app-banner {
-    background-image: url('/design/bg-desktop-dark.jpg');
+    background-image: url('https://images.unsplash.com/photo-1579547621113-e4bb2a19bdd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc1fHxwdXJwbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60');
+    background-size: 100%;
     width: 100%;
     height: 40vh;
     display: inline-block;
@@ -32,7 +34,6 @@ h1 {
 
 #form {
     margin-top: 0;
-   
     display: flex;
     flex-direction: column;
     
@@ -41,23 +42,35 @@ h1 {
     width: 25rem;
     height: 2rem; 
     margin-bottom: 25px;
-    border-radius: 5px;
+    border-radius: 0;
+    border: none;
+    box-shadow: hsl(235, 24%, 19%);
+    background-color: hsl(237, 14%, 20%);
+    color: hsl(234, 39%, 95%);
+    padding: 15px;
+   
 
+}
+
+#input::placeholder {
+    color: hsl(234, 39%, 85%);
+    
 }
 
 .todos {
     list-style-type: none;
     width: 25rem;
     border-radius: 5px;
-    background-color: whitesmoke;
+    background-color: hsl(237, 14%, 20%);
     padding: 0;
+    color: hsl(234, 39%, 85%);
     
     
 }
 
 ul li:before {
     content: '✓ ';
-    color: purple;
+    color: hsl(234, 39%, 85%);
 }
 
 li {
@@ -83,18 +96,22 @@ button {
 }
 
 button:hover {
-    color: rgb(71, 24, 201);
+    color: rgb(56, 56, 221);
 }
 
 #button-labels {
     display: flex;
     justify-content: space-evenly;
     width: 25rem; 
-    border-radius: 5%;
+    border-radius: none;
     margin-top: 0;
     margin: 0 auto;
+    background-color: hsl(237, 14%, 20%);
 }
-
+ 
+button {
+    color: hsl(234, 39%, 95%);
+ }
 #todo-container {
    
     display: flex;

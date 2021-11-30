@@ -22,7 +22,7 @@ app.get('/all',authCtrl.allTodo);
 app.get('/active', authCtrl.activeTodo);
 app.get('/completed', authCtrl.completedTodo);
 app.put('/todo/:id', authCtrl.updateTodo);
-app.delete('/todo'), authCtrl.deleteAll;
+
 
 
 const port = process.env.PORT || process.env.SERVER_PORT;

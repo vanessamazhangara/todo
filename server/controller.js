@@ -5,6 +5,7 @@ let todoArray = [
 ]
 
 module.exports = {
+
     createTodo: (req, res) => {
         const newTodo = req.body
         newTodo.id = uuidv4();
@@ -52,11 +53,6 @@ module.exports = {
         })
         res.status(200).send(completedArray);
     },
-
-    // deleteAll: (req,res) => {
-    //     let todoArray = [];
-    //     res.status(200).send(todoArray);
-    // },
 
    
 }
