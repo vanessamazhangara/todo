@@ -8,6 +8,8 @@ Users are able to create and organize items on their list, according to their ne
 
 ![Todo Web App](./images/TodoList.png)
 
+![Todo Web App](./images/TodoComplete.png)
+
 
 
 Tech Stack:
