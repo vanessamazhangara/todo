@@ -19,15 +19,6 @@ const addEventListeners = () => {
      }
 }
 
-// const deleteTodo = () => {
-//     // const allTodoElements = document.querySelectorAll('li');
-//     // for (let i = 0; i < allTodoElements.length; i++) {
-//     //    const li = allTodoElements[i];
-//     //    li.appendChild(deleteBtn);
-//     //    deleteBtn.setAttribute('id', 'delete-todo')
-       
-    
-// }
 
 
 form.addEventListener('submit', (e) => {
@@ -61,9 +52,6 @@ form.addEventListener('submit', (e) => {
 });
 
 
-
-// newTodo.innerText = '<h1>Hello</h1>'
-// newTodo.innerHTML = '<h1>Hello</h1>'
 
 const getTodoList = () =>{
     
